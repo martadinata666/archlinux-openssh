@@ -1,4 +1,4 @@
-Archlinux with OpenSSH ready
+# Archlinux with OpenSSH ready
 
 # Usage 
 ```
