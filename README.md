@@ -15,4 +15,4 @@ $ssh -p 2222 arch@ip-address
 arch
 ```
 
-This image already setup with sudo. You can using sudo command to experiment further.
+This image already setup with sudo. You can use sudo command to experiment further.
