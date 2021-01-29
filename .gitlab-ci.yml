@@ -17,4 +17,5 @@ docker-build-master:
     - docker push "$CI_DOCKERHUB_REGISTRY_IMAGE"
     - docker push "$CI_DOCKERHUB_REGISTRY_IMAGE:$RELEASE"
   only:
-    - master
+    refs:
+      - master
