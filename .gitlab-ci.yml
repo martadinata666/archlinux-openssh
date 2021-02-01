@@ -19,3 +19,4 @@ docker-build-master:
   only:
     refs:
       - master
+      - schedules
