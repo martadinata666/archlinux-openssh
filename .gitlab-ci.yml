@@ -3,7 +3,7 @@ variables:
   RELEASE: "$CI_COMMIT_BRANCH"
 docker-build-master:
   # Official docker image.
-  image: archlinux:base
+  image: docker:latest
   stage: build
   services:
     - docker:dind
