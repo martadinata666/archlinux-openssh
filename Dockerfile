@@ -1,10 +1,5 @@
-FROM archlinux:latest
-ENV HOME /home/arch
-COPY sudoers /etc/sudoers
-RUN pacman -Syu --noconfirm openssh sudo nano
-RUN groupadd arch
-RUN useradd -u 1000 -g arch -m -d /home/arch -s /bin/bash -p $(echo arch | openssl passwd -1 -stdin) arch
-RUN gpasswd -a arch wheel
+FROM registry.gitlab.com/dedyms/archlinux:latest
+RUN pacman -Syu --noconfirm openssh sudo nano &&  rm -rf /var/cache/pacman/pkg/* && rm -rf /var/lib/pacman/sync/*
 EXPOSE 22
 WORKDIR $HOME
 RUN /usr/bin/ssh-keygen -A
